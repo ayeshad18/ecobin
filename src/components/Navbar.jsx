@@ -11,7 +11,8 @@ import {
   RefreshCw,
   Database,
   Menu,
-  X
+  X,
+  Smartphone
 } from 'lucide-react';
 
 export default function Navbar({ 
@@ -22,6 +23,7 @@ export default function Navbar({
   iotConfig, 
   onOpenIotModal, 
   onOpenFirebaseModal,
+  onOpenInstallModal,
   onRefreshData,
   isRefreshing
 }) {
@@ -98,6 +100,16 @@ export default function Navbar({
             >
               <Database className="w-3.5 h-3.5 text-dusty-light" />
               <span>Backend Config</span>
+            </button>
+
+            {/* Install App Button */}
+            <button
+              onClick={onOpenInstallModal}
+              title="Install EcoBin as a Standalone App"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-terracotta/20 hover:bg-terracotta/30 text-xs font-bold text-terracotta-light border border-terracotta/40 transition-colors"
+            >
+              <Smartphone className="w-3.5 h-3.5 text-terracotta-light" />
+              <span>Install App</span>
             </button>
 
             {/* Role & Profile Switcher Dropdown */}
@@ -228,20 +240,27 @@ export default function Navbar({
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 text-xs">
+          <div className="grid grid-cols-3 gap-2 text-xs">
             <button
               onClick={() => { onOpenIotModal(); setMobileMenuOpen(false); }}
-              className="flex items-center gap-2 p-2.5 rounded-lg bg-navy-light text-sand-light border border-sand/10"
+              className="flex flex-col items-center justify-center p-2 rounded-lg bg-navy-light text-sand-light border border-sand/10 text-center"
             >
-              <Sliders className="w-4 h-4 text-terracotta" />
-              <span>IoT & Simulator</span>
+              <Sliders className="w-4 h-4 text-terracotta mb-1" />
+              <span className="text-[10px]">IoT & Sim</span>
             </button>
             <button
               onClick={() => { onOpenFirebaseModal(); setMobileMenuOpen(false); }}
-              className="flex items-center gap-2 p-2.5 rounded-lg bg-navy-light text-sand-light border border-sand/10"
+              className="flex flex-col items-center justify-center p-2 rounded-lg bg-navy-light text-sand-light border border-sand/10 text-center"
             >
-              <Database className="w-4 h-4 text-dusty" />
-              <span>Firebase Setup</span>
+              <Database className="w-4 h-4 text-dusty mb-1" />
+              <span className="text-[10px]">Firebase</span>
+            </button>
+            <button
+              onClick={() => { onOpenInstallModal(); setMobileMenuOpen(false); }}
+              className="flex flex-col items-center justify-center p-2 rounded-lg bg-terracotta/20 text-terracotta-light border border-terracotta/40 text-center"
+            >
+              <Smartphone className="w-4 h-4 text-terracotta-light mb-1" />
+              <span className="text-[10px] font-bold">Install App</span>
             </button>
           </div>
 

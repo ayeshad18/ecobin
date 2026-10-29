@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#202B3C" />
+      <stop offset="100%" stop-color="#161D29" />
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9917D" />
+      <stop offset="100%" stop-color="#C77962" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8196AB" />
+      <stop offset="100%" stop-color="#62768B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded app squircle -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)" />
+  
+  <!-- Subtle border ring -->
+  <rect x="8" y="8" width="496" height="496" rx="108" fill="none" stroke="#F3EBDD" stroke-width="4" stroke-opacity="0.15" />
+
+  <!-- Inner glowing aura -->
+  <circle cx="256" cy="256" r="170" fill="#C77962" opacity="0.08" />
+
+  <!-- EcoBin Graphic -->
+  <g transform="translate(106, 100)">
+    <!-- Bin Lid Handle -->
+    <rect x="110" y="20" width="80" height="24" rx="12" fill="url(#accentGrad)" />
+
+    <!-- Bin Lid Top Bar -->
+    <rect x="25" y="44" width="250" height="32" rx="16" fill="#F3EBDD" />
+
+    <!-- Bin Main Body -->
+    <path d="M 45 92 
+             L 70 270 
+             C 74 295, 95 314, 120 314 
+             L 180 314 
+             C 205 314, 226 295, 230 270 
+             L 255 92 
+             Z" 
+          fill="url(#iconGrad)" />
+
+    <!-- Vertical Ribs -->
+    <rect x="105" y="125" width="16" height="130" rx="8" fill="#F3EBDD" opacity="0.85" />
+    <rect x="142" y="125" width="16" height="130" rx="8" fill="#F3EBDD" opacity="0.85" />
+    <rect x="179" y="125" width="16" height="130" rx="8" fill="#F3EBDD" opacity="0.85" />
+
+    <!-- IoT Signal Waves Top Right -->
+    <path d="M 230 20 A 45 45 0 0 1 270 60" fill="none" stroke="#F3EBDD" stroke-width="10" stroke-linecap="round" />
+    <path d="M 245 5 A 65 65 0 0 1 295 55" fill="none" stroke="#8196AB" stroke-width="8" stroke-linecap="round" opacity="0.8" />
+  </g>
+</svg>

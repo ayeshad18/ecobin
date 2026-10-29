@@ -1,0 +1,20 @@
+{
+  "name": "EcoBin — Smarter Waste. Better Campuses.",
+  "short_name": "EcoBin",
+  "description": "Campus Smart Waste Management & IoT Telemetry Dashboard",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F3EBDD",
+  "theme_color": "#202B3C",
+  "categories": ["utilities", "productivity", "education"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

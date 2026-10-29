@@ -1,0 +1,9 @@
+{
+  "appId": "edu.campus.ecobin",
+  "appName": "EcoBin",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

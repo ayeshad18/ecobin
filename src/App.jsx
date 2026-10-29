@@ -5,6 +5,7 @@ import StaffDashboard from './components/staff/StaffDashboard';
 import AdminDashboard from './components/admin/AdminDashboard';
 import IotControlModal from './components/iot/IotControlModal';
 import FirebaseModal from './components/common/FirebaseModal';
+import InstallAppModal from './components/common/InstallAppModal';
 import { 
   loadEcoBinStore, 
   saveEcoBinStore, 
@@ -30,6 +31,7 @@ export default function App() {
   // Modal visibility
   const [isIotModalOpen, setIsIotModalOpen] = useState(false);
   const [isFirebaseModalOpen, setIsFirebaseModalOpen] = useState(false);
+  const [isInstallModalOpen, setIsInstallModalOpen] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   // Sync store changes to localStorage
@@ -351,6 +353,7 @@ export default function App() {
         iotConfig={store.iotConfig}
         onOpenIotModal={() => setIsIotModalOpen(true)}
         onOpenFirebaseModal={() => setIsFirebaseModalOpen(true)}
+        onOpenInstallModal={() => setIsInstallModalOpen(true)}
         onRefreshData={handleRefreshData}
         isRefreshing={isRefreshing}
       />
@@ -402,6 +405,12 @@ export default function App() {
       <FirebaseModal
         isOpen={isFirebaseModalOpen}
         onClose={() => setIsFirebaseModalOpen(false)}
+      />
+
+      {/* Install App Modal */}
+      <InstallAppModal
+        isOpen={isInstallModalOpen}
+        onClose={() => setIsInstallModalOpen(false)}
       />
 
       {/* Persistent Footer */}
